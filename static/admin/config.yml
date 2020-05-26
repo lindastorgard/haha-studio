@@ -35,6 +35,29 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
+  - name: "projects"
+    label: "Projects"
+    folder: "src/pages/projects"
+    # if create: false only allows single instance entrance
+    create: true
+    slug: "project-{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "project",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - {
+          label: Image Gallery,
+          name: imagegallery,
+          widget: list,
+          fields: [{ label: Image, name: image, widget: image }],
+        }
+
   - name: "pages"
     label: "Pages"
     files:
