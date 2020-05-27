@@ -37,27 +37,46 @@ collections:
 
   - name: "projects"
     label: "Projects"
-    label_singular: "Project"
+    label_singular: "New Project"
     folder: "src/pages/projects"
+    description: "Add new project here that is going to be displayed under Projects category"
     # if create: false only allows single instance entrance
     create: true
-    slug: "project-{{title}}"
+    slug: "projects-{{title}}"
     fields:
+      - label: 'Related Products'
+        name: 'blog'
+        widget: 'relation'
+        multiple: "true"
+        collection: 'blog'
+        searchFields: ['title']
+        valueField: 'title'
+        displayFields: ['title', 'date']
+        hint: "Select related products, maximum of three"
       - {
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
           default: "project-post",
         }
-      - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Featured Image Alt", name: "featuredimagealt", widget: string, hint: "Add alternative text for the featured image used by screen readers for people with visual disability" }
+      - { label: "Details", name: "details", widget: "text"}
+      - { label: "Release year", name: "releaseyear", widget: "text"}
+      - { label: "Description", name: "description", widget: "text"}
+      - { label: "Photo Credits", name: "photocredits", widget: "string"}
       - {
           label: Image,
           name: Image,
           widget: list,
-          fields: [{ label: Image, name: image, widget: image }],
+          fields: [
+            { label: Image, name: image, widget: image },
+            { label: Alt, name: alt, widget: string,  hint: "Add alternative text for the featured image used by screen readers for people with visual disability" },
+          ],
         }
+      
 
   - name: "pages"
     label: "Pages"
