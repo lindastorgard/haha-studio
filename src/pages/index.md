@@ -1,8 +1,8 @@
 ---
-heading: Great coffee with a conscience
+heading: Spin lamp
 subheading: Support sustainable farming while enjoying a cup
 templateKey: index-page
-title: Great coffee with a conscience
+title: Frontpage
 image: /img/home-jumbotron.jpg
 section:
   - text: >-
