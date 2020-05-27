@@ -1,4 +1,5 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
@@ -49,7 +50,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <main sx={{maxWidth: "1600px", m: "0 auto"}}>{children}</main>
       <Footer />
     </div>
   )

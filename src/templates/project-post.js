@@ -6,13 +6,12 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-
-
+import SectionConainer from "../components/SectionContainer"
 
 export const ProjectPostTemplate = ({ description, details, featuredimage, featuredimagealt, photocredits, releaseyearn, title,
   helmet }) => {
     return(
-      <section>
+      <SectionConainer>
         {helmet || ''}
         {featuredimage ? (
           <div >
@@ -26,14 +25,13 @@ export const ProjectPostTemplate = ({ description, details, featuredimage, featu
         ) : null}
           <h1>{title}</h1>
           <p>{description}</p>
-
-     
-    </section>
+    </SectionConainer>
     )
 };
 
 const ProjectPost = ({ data }) => {
   const { markdownRemark: post } = data
+  console.log(post.id)
   return (
     <Layout>
       <ProjectPostTemplate
@@ -71,6 +69,15 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       frontmatter {
+        imagegallery {
+          alt
+          image {
+            childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
         date(formatString: "MMMM DD, YYYY")
         title
         description
