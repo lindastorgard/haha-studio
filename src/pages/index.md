@@ -2,7 +2,7 @@
 heading: Spin lamp
 subheading: Support sustainable farming while enjoying a cup
 templateKey: index-page
-title: Frontpage
+title: Frontpage test
 image: /img/home-jumbotron.jpg
 section:
   - text: >-
