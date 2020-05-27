@@ -62,7 +62,33 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-     
+      - file: "src/pages/index.md"
+        label: "Landing Page"
+        name: "index"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Alt, name: alt, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - {
+            label: Section,
+            name: section,
+            widget: list,
+            fields:
+              [
+                { label: Heading, name: heading, widget: string },
+                { label: Text, name: text, widget: text },
+                { label: Linktitle, name: linktitle, widget: text },
+                { label: Image, name: image, widget: image },
+                { label: Alt, name: alt, widget: string },
+              ],
+          }
       - file: "src/content/about/index.md"
         label: "About"
         name: "about"
