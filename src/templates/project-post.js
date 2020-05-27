@@ -1,16 +1,18 @@
 /** @jsx jsx */
-import { jsx, Divider } from "theme-ui"
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { jsx } from "theme-ui"
+// import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
-export const ProjectPostTemplate = ({ data }) => {
-    const { markdownRemark: project } = data
-    console.log(project);
+const ProjectPostTemplate = ({ data }) => {
+    const { markdownRemark: post } = data
+    console.log(post);
     
     return(
         <div>Im project </div>  
     )
 };
+
+export default ProjectPostTemplate;
 
 export const pageQuery = graphql`
   query ProjectPostByID($id: String!) {
@@ -25,4 +27,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
 

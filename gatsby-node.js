@@ -46,26 +46,6 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    const project = result.data.allMarkdownRemark.edges
-
-    project.forEach((edge) => {
-      const id = edge.node.id
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
-        // additional data can be passed via context
-        context: {
-          id,
-        },
-      })
-    })
-
-
-
-
     // Tag pages:
     let tags = []
     // Iterate through each post, putting all found tags into `tags`
