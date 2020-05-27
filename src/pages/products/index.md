@@ -108,6 +108,10 @@ productcolor:
     alttext: Alia Pack_A candle holder
     colorname: silver
     hexcode: "#C0C6CB"
+  - image: /img/d_shop_product_alia_a-1.png
+    alttext: Alia Pack_A candle holder
+    hexcode: "#0F3A5C"
+    colorname: blue
 main:
   heading: Great coffee with no compromises
   description: >
