@@ -10,15 +10,15 @@ import SectionContainer from '../components/SectionContainer'
 import ImageGallery from "../components/ImageGallery"
 
 
-export const ProjectPostTemplate = ({ 
-  description, 
-  details, 
-  featuredimage, 
-  featuredimagealt, 
-  photocredits, 
-  releaseyear, 
-  title, 
-  imagegallery,
+export const ProductPostTemplate = ({ 
+//   description, 
+//   details, 
+//   featuredimage, 
+//   featuredimagealt, 
+//   photocredits, 
+//   releaseyear, 
+//   title, 
+//   imagegallery,
   helmet 
 }) => {
    
@@ -45,10 +45,6 @@ export const ProjectPostTemplate = ({
         </article>
 
         </section>
-        { imagegallery ? (
-          <ImageGallery images={imagegallery} />
-        ) : null}
-
         <aside>
           <h2>Featured products</h2>
         </aside>
@@ -63,14 +59,14 @@ const ProjectPost = ({ data }) => {
     <Layout>
       <ProjectPostTemplate
         description={post.frontmatter.description}
-        details={post.frontmatter.details}
-        featuredimage={post.frontmatter.featuredimage}
-        featuredimagealt={post.frontmatter.featuredimagealt}
-        photocredits={post.frontmatter.photocredits}
-        releaseyear={post.frontmatter.releaseyear}
-        imagegallery={post.frontmatter.imagegallery}
+        // details={post.frontmatter.details}
+        // featuredimage={post.frontmatter.featuredimage}
+        // featuredimagealt={post.frontmatter.featuredimagealt}
+        // photocredits={post.frontmatter.photocredits}
+        // releaseyear={post.frontmatter.releaseyear}
+        // imagegallery={post.frontmatter.imagegallery}
         helmet={
-          <Helmet titleTemplate="%s | Project">
+          <Helmet titleTemplate="%s | Product">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
@@ -93,38 +89,14 @@ ProjectPost.propTypes = {
 export default ProjectPost
 
 export const pageQuery = graphql`
-  query ProjectPostByID($id: String!) {
+  query ProjductPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
         description
-        details
-        releaseyear
-        photocredits
-        imagegallery {
-          image {
-            id
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          alttext
-        }
-        featuredimagealt
-        featuredimage {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
   }
 `
-
-
