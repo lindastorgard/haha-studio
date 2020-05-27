@@ -6,16 +6,27 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import SectionConainer from "../components/SectionContainer"
+import SectionContainer from '../components/SectionContainer'
+import ImageGallery from "../components/ImageGallery"
 
-export const ProjectPostTemplate = ({ description, details, featuredimage, featuredimagealt, photocredits, releaseyearn, title,
-  helmet }) => {
-    console.log(featuredimage)
+
+export const ProjectPostTemplate = ({ 
+  description, 
+  details, 
+  featuredimage, 
+  featuredimagealt, 
+  photocredits, 
+  releaseyear, 
+  title, 
+  imagegallery,
+  helmet 
+}) => {
+   
     return(
-      <SectionConainer>
+      <SectionContainer>
         {helmet || ''}
         {featuredimage ? (
-          <div >
+          <div>
             <PreviewCompatibleImage
               imageInfo={{
                 image: featuredimage,
@@ -26,7 +37,11 @@ export const ProjectPostTemplate = ({ description, details, featuredimage, featu
         ) : null}
           <h1>{title}</h1>
           <p>{description}</p>
-    </SectionConainer>
+        { imagegallery ? (
+          <ImageGallery images={imagegallery} />
+        ) : null}
+        
+    </SectionContainer>
     )
 };
 
@@ -42,6 +57,7 @@ const ProjectPost = ({ data }) => {
         featuredimagealt={post.frontmatter.featuredimagealt}
         photocredits={post.frontmatter.photocredits}
         releaseyear={post.frontmatter.releaseyear}
+        imagegallery={post.frontmatter.imagegallery}
         helmet={
           <Helmet titleTemplate="%s | Project">
             <title>{`${post.frontmatter.title}`}</title>
@@ -76,6 +92,17 @@ export const pageQuery = graphql`
         details
         releaseyear
         photocredits
+        imagegallery {
+          image {
+            id
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          alttext
+        }
         featuredimagealt
         featuredimage {
           childImageSharp {

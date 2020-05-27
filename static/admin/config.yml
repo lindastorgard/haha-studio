@@ -72,18 +72,11 @@ collections:
           label_singular: "New Image",
           name: imagegallery,
           widget: list,
-          fields: [
-            { label: Image, name: image, widget: image },
-          ],
-        }   
-      - {
-          label: Gallery,
-          label_singular: "New Image",
-          name: gallery,
-          widget: list,
-          fields: [
-            { label: Image, name: image, widget: image },
-          ],
+          fields: 
+            [
+              { label: "Image", name: "image", widget: "image" },
+              { label: "Alt Text", name: "alttext", widget: "string" },
+            ],
         }   
 
   - name: "pages"
