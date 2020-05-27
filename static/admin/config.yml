@@ -169,15 +169,15 @@ collections:
                 { label: Linktitle, name: linktitle, widget: text },
                 { label: Image, name: image, widget: image },
                 { label: Alt, name: alt, widget: string },
-                # { 
-                #   label: 'Page Link', 
-                #   name: 'pages', 
-                #   widget: 'relation', 
-                #   collection: 'pages', 
-                #   searchFields: ['fields.title'], 
-                #   valueField: 'title',
-                #   hint: "Select which page you want ot link to"
-                # }
+                { 
+                  label: 'Page Link', 
+                  name: 'pages', 
+                  widget: 'relation', 
+                  collection: 'pages', 
+                  searchFields: ['title'], 
+                  valueField: 'title',
+                  hint: "Select which page you want ot link to"
+                }
               ],
           }
       - file: "src/content/about/index.md"

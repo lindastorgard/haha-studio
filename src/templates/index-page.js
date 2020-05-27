@@ -19,7 +19,7 @@ export const IndexPageTemplate = ({ title, image, imageAlt , section}) => {
             }}
           />  
         ) : null}
-       {section.map( s => {
+       {section?.map( s => {
          return(
            <section key={s.heading} sx={{display: "flex"}}>
               <div sx={{flex: 3}}>
@@ -49,9 +49,6 @@ IndexPageTemplate.propTypes = {
   imageAlt: PropTypes.string,
   heading: PropTypes.string,
   section: PropTypes.array,
-  // intro: PropTypes.shape({
-  //   blurbs: PropTypes.array,
-  // }),
 }
 
 const IndexPage = ({ data }) => {
