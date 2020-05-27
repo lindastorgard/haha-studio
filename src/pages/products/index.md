@@ -2,22 +2,8 @@
 heading: Great coffee with a conscience
 products:
   - Our Coffee
-projects:
-  - Rainbow Lamp
 templateKey: product-page
 date: 2020-05-27T19:13:55.430Z
-title: Alia Pack_A
-description: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-  eu fugiat nulla pariatur.
-
-
-  \
-
-  Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 price: "1199"
 details: |-
   Chrome plated zinc alloy\
@@ -94,6 +80,34 @@ testimonials:
   - author: Philipp Trommler
     quote: Kaldi is the place to go if you want the best quality coffee. I love
       their stance on empowering farmers and transparency.
+projects:
+  - Rainbow Lamp
+title: Alia Pack_A
+description: >-
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+  eu fugiat nulla pariatur.
+
+
+  \
+
+  Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+imagegallery:
+  - image: /img/d_shop_product_alia_a-1.png
+    alttext: Alia Pack_A candle holder
+  - alttext: Alia Pack_A candle holder
+    image: /img/d_shop_product_alia_a-1.png
+  - alttext: Alia Pack_A candle holder
+    image: /img/d_shop_product_alia_a-1.png
+  - image: /img/d_shop_product_alia_a-1.png
+    alttext: Alia Pack_A candle holder
+productcolor:
+  - image: /img/d_shop_product_alia_a-1.png
+    alttext: Alia Pack_A candle holder
+    colorname: silver
+    hexcode: "#C0C6CB"
 main:
   heading: Great coffee with no compromises
   description: >
