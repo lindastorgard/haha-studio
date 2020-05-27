@@ -74,7 +74,15 @@ collections:
           widget: list,
           fields: [
             { label: Image, name: image, widget: image },
-            { label: Alt, name: alt, widget: string,  hint: "Add alternative text for the featured image used by screen readers for people with visual disability" },
+          ],
+        }   
+      - {
+          label: Gallery,
+          label_singular: "New Image",
+          name: gallery,
+          widget: list,
+          fields: [
+            { label: Image, name: image, widget: image },
           ],
         }   
 

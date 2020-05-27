@@ -10,6 +10,7 @@ import SectionConainer from "../components/SectionContainer"
 
 export const ProjectPostTemplate = ({ description, details, featuredimage, featuredimagealt, photocredits, releaseyearn, title,
   helmet }) => {
+    console.log(featuredimage)
     return(
       <SectionConainer>
         {helmet || ''}
@@ -69,16 +70,6 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       frontmatter {
-        imagegallery {
-          alt
-          image {
-            childImageSharp {
-              fluid {
-                src
-              }
-            }
-          }
-        } 
         date(formatString: "MMMM DD, YYYY")
         title
         description
