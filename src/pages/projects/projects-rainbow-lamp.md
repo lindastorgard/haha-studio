@@ -37,4 +37,10 @@ imagegallery:
   - alt: Rainbow Lamp
     image: /img/project_rainbow_lamp_03-3.png
     alttext: h
+  - alttext: y
+    image: /img/flavor_wheel.jpg
+  - alttext: y
+    image: /img/home-jumbotron.jpg
+  - alttext: y
+    image: /img/jumbotron.jpg
 ---
