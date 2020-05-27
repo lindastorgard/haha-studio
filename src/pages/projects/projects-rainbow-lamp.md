@@ -30,4 +30,6 @@ imagegallery:
     image: /img/project_rainbow_lamp_03-3.png
   - alt: Rainbow Lamp
     image: /img/project_rainbow_lamp_03-3.png
+gallery:
+  - image: /img/blog-index.jpg
 ---
