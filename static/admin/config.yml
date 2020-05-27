@@ -79,69 +79,69 @@ collections:
             ],
         }
 
-  - name: "products"
-    label: "Products"
-    label_singular: "New Product"
-    folder: "src/pages/products"
-    description: "Add new product here that is going to be displayed under Products category"
-    # if create: false only allows single instance entrance
-    create: true
-    slug: "{{title}}"
-    fields:
-    - widget: 'relation'
-      label: 'Related Products'
-      name: 'products'
-      multiple: "true"
-      collection: 'products'
-      searchFields: ['title']
-      valueField: 'title'
-      displayFields: ['title', 'price']
+  # - name: "products"
+  #   label: "Products"
+  #   label_singular: "New Product"
+  #   folder: "src/pages/products"
+  #   description: "Add new product here that is going to be displayed under Products category"
+  #   # if create: false only allows single instance entrance
+  #   create: true
+  #   slug: "{{title}}"
+  #   fields:
+  #   - widget: 'relation'
+  #     label: 'Related Products'
+  #     name: 'products'
+  #     multiple: "true"
+  #     collection: 'products'
+  #     searchFields: ['title']
+  #     valueField: 'title'
+  #     displayFields: ['title', 'price']
 
-    - label: 'Featured Projects'
-      name: 'projects'
-      widget: 'relation'
-      multiple: "true"
-      collection: 'projects'
-      searchFields: ['title']
-      valueField: 'title'
-      displayFields: ['title', 'featuredimage']
-      hint: "Select related products, maximum of four"
+  #   - label: 'Featured Projects'
+  #     name: 'projects'
+  #     widget: 'relation'
+  #     multiple: "true"
+  #     collection: 'projects'
+  #     searchFields: ['title']
+  #     valueField: 'title'
+  #     displayFields: ['title', 'featuredimage']
+  #     hint: "Select related products, maximum of four"
     
-    - {
-        label: "Template Key",
-        name: "templateKey",
-        widget: "hidden",
-        default: "product-post",
-      }
-    - { label: "Publish Date", name: "date", widget: "datetime" }
-    - { label: "Title", name: "title", widget: "string" }
-    - { label: "Description", name: "description", widget: "markdown"}
-    - { label: "Price", name: "price", widget: "string" }
-    - { label: "Product Details", name: "details", widget: "markdown", hint: "Add technical specifications that will be listed under product details"}
-    - {
-        label: Image Gallery,
-        label_singular: "New Image",
-        name: imagegallery,
-        widget: list,
-        fields: 
-          [
-            { label: "Image", name: "image", widget: "image" },
-            { label: "Alt Text", name: "alttext", widget: "string" },
-          ],
-      } 
-    - {
-        label: Product Colors,
-        label_singular: "New Color",
-        name: productcolor,
-        widget: list,
-        fields: 
-          [
-            { label: "Image", name: "image", widget: "image" },
-            { label: "Alt Text", name: "alttext", widget: "string" },
-            { label: "Color Name", name: "colorname", widget: "string" },
-            { label: "HEX code", name: "hexcode", widget: "string", hint: "Please add HEX code for the product color starting with #, eg: #C0C6CB " },
-          ],
-      }     
+  #   - {
+  #       label: "Template Key",
+  #       name: "templateKey",
+  #       widget: "hidden",
+  #       default: "product-post",
+  #     }
+  #   - { label: "Publish Date", name: "date", widget: "datetime" }
+  #   - { label: "Title", name: "title", widget: "string" }
+  #   - { label: "Description", name: "description", widget: "markdown"}
+  #   - { label: "Price", name: "price", widget: "string" }
+  #   - { label: "Product Details", name: "details", widget: "markdown", hint: "Add technical specifications that will be listed under product details"}
+  #   - {
+  #       label: Image Gallery,
+  #       label_singular: "New Image",
+  #       name: imagegallery,
+  #       widget: list,
+  #       fields: 
+  #         [
+  #           { label: "Image", name: "image", widget: "image" },
+  #           { label: "Alt Text", name: "alttext", widget: "string" },
+  #         ],
+  #     } 
+  #   - {
+  #       label: Product Colors,
+  #       label_singular: "New Color",
+  #       name: productcolor,
+  #       widget: list,
+  #       fields: 
+  #         [
+  #           { label: "Image", name: "image", widget: "image" },
+  #           { label: "Alt Text", name: "alttext", widget: "string" },
+  #           { label: "Color Name", name: "colorname", widget: "string" },
+  #           { label: "HEX code", name: "hexcode", widget: "string", hint: "Please add HEX code for the product color starting with #, eg: #C0C6CB " },
+  #         ],
+  #     }     
   
   - name: "pages"
     label: "Pages"
