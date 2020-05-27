@@ -1,5 +1,5 @@
 ---
-templateKey: project
+templateKey: project-post
 title: this is test project
 date: 2020-05-27T09:27:23.779Z
 description: HAHA studio is the Stockholm based design practice founded by Arash
