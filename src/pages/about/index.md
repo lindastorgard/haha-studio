@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
 path: /about
-title: test a new about
+title: About
 ---
 ### Sustainable farming
 
