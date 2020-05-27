@@ -2,120 +2,25 @@
 import { jsx } from "theme-ui"
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
+import Img from 'gatsby-image'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({
   image,
+  alt,
   title,
   heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
+  // section,
 }) => (
   <div>
-    <div sx={{backgroundColor: "green"}}
-    >
-      <div
-        sx={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          sx={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'primary',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          sx={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'primary',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
-    </div>
+    <h1>{title}</h1>
+    <h3 >{heading}</h3>
     <section>
-      <div >
-        <div >
-          <div >
-            <div >
-              <div >
-                <div >
-                  <div >
-                    <h1 >{mainpitch.title}</h1>
-                  </div>
-                  <div>
-                    <h3 >{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div >
-                  <div >
-                    <h3 >
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div>
-                  <div>
-                    <Link  to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div>
-                  <h3>
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div>
-                    <Link sx={{color: "primary"}} to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Link  to="/products">See all products</Link>
+      {/* <Img fluid={image.childImageSharp.fluid} alt={alt} /> */}
     </section>
   </div>
 )
-
-IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-}
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
@@ -126,10 +31,7 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        // section={frontmatter.section}
       />
     </Layout>
   )
@@ -150,6 +52,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        heading
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -157,28 +60,33 @@ export const pageQuery = graphql`
             }
           }
         }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }
 `
+IndexPageTemplate.propTypes = {
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  title: PropTypes.string,
+  heading: PropTypes.string,
+  subheading: PropTypes.string,
+  mainpitch: PropTypes.object,
+  description: PropTypes.string,
+  intro: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
+}
+
+
+// section {
+//   heading
+//   text
+//   linktitle
+//   alt
+//   image {
+//     childImageSharp {
+//       fluid(maxWidth: 240, quality: 64) {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+// }
