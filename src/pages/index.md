@@ -1,5 +1,6 @@
 ---
 title: Landing page
+templateKey: index-page
 image: /img/project_rainbow_lamp_03-3.png
 alt: rainbow lamp
 heading: lamps
