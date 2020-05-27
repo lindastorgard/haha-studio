@@ -67,7 +67,16 @@ collections:
       - { label: "Release year", name: "releaseyear", widget: "text"}
       - { label: "Description", name: "description", widget: "text"}
       - { label: "Photo Credits", name: "photocredits", widget: "string"}
-      
+      - {
+          label: Image Gallery,
+          label_singular: "New Image",
+          name: imagegallery,
+          widget: list,
+          fields: [
+            { label: Image, name: image, widget: image },
+            { label: Alt, name: alt, widget: string,  hint: "Add alternative text for the featured image used by screen readers for people with visual disability" },
+          ],
+        }   
 
   - name: "pages"
     label: "Pages"
