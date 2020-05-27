@@ -19,17 +19,22 @@ description: >-
 
   Fit for ceiling or desk. Rainbow Lamp will be available from August 2019, email us if you are interested in pre-ordering the product.
 photocredits: "Photo credits: HAHA studio & Anna Heck"
+gallery:
+  - image: /img/blog-index.jpg
 imagegallery:
   - alt: Rainbow Lamp
     image: /img/project_rainbow_lamp_04-1.png
+    alttext: h
   - alt: Rainbow Lamp
     image: /img/project_rainbow_lamp_04-1.png
+    alttext: h
   - alt: Rainbow Lamp
     image: /img/project_rainbow_lamp_04-1.png
+    alttext: h
   - alt: Rainbow Lamp
     image: /img/project_rainbow_lamp_03-3.png
+    alttext: h
   - alt: Rainbow Lamp
     image: /img/project_rainbow_lamp_03-3.png
-gallery:
-  - image: /img/blog-index.jpg
+    alttext: h
 ---
