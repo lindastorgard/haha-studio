@@ -1,14 +1,57 @@
 ---
-templateKey: 'product-page'
-path: /products
-title: Our Coffee
-image: /img/jumbotron.jpg
 heading: Great coffee with a conscience
+products:
+  - Our Coffee
+projects:
+  - Rainbow Lamp
+templateKey: product-page
+date: 2020-05-27T19:13:55.430Z
+title: Alia Pack_A
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+  eu fugiat nulla pariatur.
+
+
+  \
+
+  Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+price: "1199"
+details: |-
+  Chrome plated zinc alloy\
+  0.5 kg\
+  66 x 85 x 30 mm (H/W/D)
+path: /products
+pricing:
+  heading: Monthly subscriptions
+  description: We make it easy to make great coffee a part of your life. Choose
+    one of our monthly subscription plans to receive great coffee at your
+    doorstep each month. Contact us about more details and payment info.
+  plans:
+    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
+      items:
+        - 3 lbs of coffee per month
+        - Green or roasted beans"
+        - One or two varieties of beans"
+      plan: Small
+      price: "50"
+    - description: Great for avid drinkers, java-loving couples and bigger crowds
+      items:
+        - 6 lbs of coffee per month
+        - Green or roasted beans
+        - Up to 4 different varieties of beans
+      plan: Big
+      price: "80"
+    - description: Want a few tiny batches from different varieties? Try our custom plan
+      items:
+        - Whatever you need
+        - Green or roasted beans
+        - Unlimited varieties
+      plan: Custom
+      price: ??
+full_image: /img/products-full-width.jpg
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -44,6 +87,13 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
+testimonials:
+  - author: Elisabeth Kaurismäki
+    quote: The first time I tried Kaldi’s coffee, I couldn’t even believe that was
+      the same thing I’ve been drinking every morning.
+  - author: Philipp Trommler
+    quote: Kaldi is the place to go if you want the best quality coffee. I love
+      their stance on empowering farmers and transparency.
 main:
   heading: Great coffee with no compromises
   description: >
@@ -60,42 +110,5 @@ main:
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
-testimonials:
-  - author: Elisabeth Kaurismäki
-    quote: >-
-      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
-  - author: Philipp Trommler
-    quote: >-
-      Kaldi is the place to go if you want the best quality coffee. I love their
-      stance on empowering farmers and transparency.
-full_image: /img/products-full-width.jpg
-pricing:
-  heading: Monthly subscriptions
-  description: >-
-    We make it easy to make great coffee a part of your life. Choose one of our
-    monthly subscription plans to receive great coffee at your doorstep each
-    month. Contact us about more details and payment info.
-  plans:
-    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
-      items:
-        - 3 lbs of coffee per month
-        - Green or roasted beans"
-        - One or two varieties of beans"
-      plan: Small
-      price: '50'
-    - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
-      items:
-        - 6 lbs of coffee per month
-        - Green or roasted beans
-        - Up to 4 different varieties of beans
-      plan: Big
-      price: '80'
-    - description: Want a few tiny batches from different varieties? Try our custom plan
-      items:
-        - Whatever you need
-        - Green or roasted beans
-        - Unlimited varieties
-      plan: Custom
-      price: '??'
+image: /img/jumbotron.jpg
 ---
