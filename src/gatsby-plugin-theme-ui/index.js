@@ -2,8 +2,9 @@ export default {
     colors: {
       text: "#333",
       background: "#fff",
-      primary: "#639",
-      secondary: "#ff6347",
+      primary: "#0C1428",
+      secondary: "#F1F1EF",
+      details: "#545454",
     },
     fonts: {
       body: "system-ui, sans-serif",

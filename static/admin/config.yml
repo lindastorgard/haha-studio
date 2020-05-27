@@ -52,7 +52,7 @@ collections:
         searchFields: ['title']
         valueField: 'title'
         displayFields: ['title', 'date']
-        hint: "Select related products, maximum of three"
+        hint: "Select related products, maximum of four"
       - {
           label: "Template Key",
           name: "templateKey",
@@ -68,8 +68,9 @@ collections:
       - { label: "Description", name: "description", widget: "text"}
       - { label: "Photo Credits", name: "photocredits", widget: "string"}
       - {
-          label: Image,
-          name: Image,
+          label: Image Gallery,
+          label_singular: "New Image",
+          name: imagegallery,
           widget: list,
           fields: [
             { label: Image, name: image, widget: image },
