@@ -1,15 +1,29 @@
 ---
+blog:
+  - Making sense of the SCAA’s new Flavor Wheel
 templateKey: project-post
-title: this is test project
 date: 2020-05-27T09:27:23.779Z
-description: HAHA studio is the Stockholm based design practice founded by Arash
-  Eskafi and Yujin Chiang in 2015. Hailing from different cultures— Scandinavia
-  and East Asia— the studio is in constant search of what can be understood by
-  all of us, like laughter. HAHA relies on fundamental shapes, choice materials
-  and universal truths to design their iconic work. To create objects that all
-  of us have an instinctive response to, HAHA works hand in hand with
-  craftspeople in Sweden and Taiwan. The practice designs lighting fixtures,
-  accessories, limited editions, and undertakes regular collaborations in
-  interior architecture.
-Image: []
+title: this is test project
+featuredimage: /img/project_rainbow_lamp_04-1.png
+featuredimagealt: rainbow lamp
+details: |-
+  Producer: HAHA studio
+  Assistant: Sven-Eric Söderström
+releaseyear: "2017"
+description: >-
+  There is a story behind Rainbow: its shape was not designed, it was found.
+  Each part existed for a different purpose before they were united in Rainbow.
+  The aluminum elbow is a standard part for the commercial vehicle industry. The
+  light itself is a standard LED bulb.
+
+
+  Fit for ceiling or desk. Rainbow Lamp will be available from August 2019, email us if you are interested in pre-ordering the product.
+photocredits: "Photo credits: HAHA studio & Anna Heck"
+Image:
+  - image: /img/project_rainbow_lamp_04-1.png
+    alt: rainbow lamp
+  - image: /img/project_rainbow_lamp_03-3.png
+    alt: rainbow lamp
+  - image: /img/project_rainbow_lamp_04-1.png
+    alt: rainbow lamp
 ---
