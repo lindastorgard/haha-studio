@@ -1,47 +1,44 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import PropTypes, { array } from 'prop-types'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import { jsx } from "theme-ui";
+import PropTypes, { array } from "prop-types";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import { Link, graphql } from "gatsby";
+import Layout from "../components/Layout";
 
-export const IndexPageTemplate = ({ title, image, imageAlt , section}) => {
+export const IndexPageTemplate = ({ title, image, imageAlt, section }) => {
   return (
     <section>
-      <h2>
-          {title}
-        </h2>
-       {image ? (
-          <PreviewCompatibleImage
-            imageInfo={{
-              image: image,
-              alt: imageAlt,
-            }}
-          />  
-        ) : null}
-       {section?.map( s => {
-         return(
-           <section key={s.heading} sx={{display: "flex"}}>
-              <div sx={{flex: 3}}>
-                <PreviewCompatibleImage
-                  imageInfo={{
-                    image: s.image,
-                    alt: s.alt,
-                  }}
-               />  
-              </div>
-             <article sx={{flex: 2}}>
+      <h2>{title}</h2>
+      {image ? (
+        <PreviewCompatibleImage
+          imageInfo={{
+            image: image,
+            alt: imageAlt,
+          }}
+        />
+      ) : null}
+      {section?.map((s) => {
+        return (
+          <section key={s.heading} sx={{ display: "flex" }}>
+            <div sx={{ flex: 3 }}>
+              <PreviewCompatibleImage
+                imageInfo={{
+                  image: s.image,
+                  alt: s.alt,
+                }}
+              />
+            </div>
+            <article sx={{ flex: 2 }}>
               <h2>{s.heading}</h2>
               <p>{s.text}</p>
               <button>{s.linktitle}</button>
-              </article>
-           </section>
-         )
-       })}
+            </article>
+          </section>
+        );
+      })}
     </section>
-  )
-}
-
+  );
+};
 
 IndexPageTemplate.propTypes = {
   title: PropTypes.string,
@@ -49,10 +46,10 @@ IndexPageTemplate.propTypes = {
   imageAlt: PropTypes.string,
   heading: PropTypes.string,
   section: PropTypes.array,
-}
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
   return (
     <Layout>
       <IndexPageTemplate
@@ -63,8 +60,8 @@ const IndexPage = ({ data }) => {
         section={frontmatter.section}
       />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -72,10 +69,9 @@ IndexPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default IndexPage
-
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -108,4 +104,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
