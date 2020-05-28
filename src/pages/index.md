@@ -10,5 +10,5 @@ section:
     image: /img/blog-index.jpg
     alt: lamp
     text: this is so amazing
-    pages: Landing page
+    pages: Landing page test
 ---
