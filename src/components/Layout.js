@@ -50,7 +50,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <main sx={{ maxWidth: "1600px", m: "0 auto" }}>{children}</main>
+      <main sx={{ maxWidth: "2000px", m: "0 auto" }}>{children}</main>
       <Footer />
     </div>
   );
