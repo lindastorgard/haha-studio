@@ -7,6 +7,7 @@ blog:
 products:
   - Alia Pack_A
   - test
+  - Alia Pack_c
 templateKey: project-post
 date: 2020-05-27T16:10:27.157Z
 title: Rainbow Lamp
