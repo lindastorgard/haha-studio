@@ -15,4 +15,14 @@ section:
 
       The practice designs lighting fixtures, accessories, limited editions, and undertakes regular collaborations in interior architecture.
     pages: Landing page test
+  - heading: Services
+    alt: services
+    pages: Landing page
+    image: /img/chemex.jpg
+    linktitle: services
+    text: >-
+      The practice designs lighting fixtures, accessories, limited editions, and
+      undertakes regular collaborations in interior architecture.
+
+      We create custommade design for  interior projects.
 ---
