@@ -1,4 +1,5 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/index-page'
 
@@ -9,12 +10,11 @@ const IndexPagePreview = ({ entry, getAsset }) => {
     return (
       <IndexPageTemplate
         title={data.title}
-        image={getAsset(data.image)}
+        image={data.image}
         imageAlt={data.alt}
         heading={data.heading}
         heading={data.heading}
         section={data.section || { blurbs: [] }}
-        // mainpitch={data.mainpitch || {}}
       />
     )
   } else {

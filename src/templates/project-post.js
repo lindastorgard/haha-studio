@@ -25,7 +25,7 @@ export const ProjectPostTemplate = ({
     return(
       <SectionContainer>
         {helmet || ''}
-        <section sx={{display: "flex"}}>
+        <section sx={{display: "flex", alignItems: "center"}}>
         {featuredimage ? (
           <div sx={{flex: 3}}>
             <PreviewCompatibleImage
@@ -37,7 +37,7 @@ export const ProjectPostTemplate = ({
             <p>{photocredits}</p>
           </div>
         ) : null}
-        <article sx={{flex: 2}}>
+        <article sx={{flex: 2, p: 4}}>
           <h1>{title}</h1>
           <p>{details}</p>
           <p>{releaseyear}</p>
