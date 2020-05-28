@@ -1,4 +1,6 @@
 ---
+products:
+  - Alia Pack_A
 projects:
   - Rainbow Lamp
 templateKey: product-post
@@ -23,7 +25,12 @@ imagegallery:
     productcolor: silver
   - image: /img/blog-index.jpg
     alttext: coffe
+    productcolor: black
+  - image: /img/chemex.jpg
+    alttext: mug
 productcolor:
   - colorname: black
     hexcode: "#000"
+  - colorname: silver
+    hexcode: "#C0C6CB"
 ---
