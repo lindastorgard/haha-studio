@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import PropTypes from 'prop-types'
-import { IndexPageTemplate } from '../../templates/index-page'
+import { jsx } from "theme-ui";
+import PropTypes from "prop-types";
+import { IndexPageTemplate } from "../../templates/index-page";
 
 const IndexPagePreview = ({ entry, getAsset }) => {
-  const data = entry.getIn(['data']).toJS()
+  const data = entry.getIn(["data"]).toJS();
 
   if (data) {
     return (
@@ -13,20 +13,19 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         image={data.image}
         imageAlt={data.alt}
         heading={data.heading}
-        heading={data.heading}
         section={data.section || { blurbs: [] }}
       />
-    )
+    );
   } else {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
-}
+};
 
 IndexPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
-}
+};
 
-export default IndexPagePreview
+export default IndexPagePreview;

@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import PropTypes from 'prop-types'
-import { ProjectPostTemplate } from '../../templates/project-post'
+import { jsx } from "theme-ui";
+import PropTypes from "prop-types";
+import { ProjectPostTemplate } from "../../templates/project-post";
 
 const ProjectPostPreview = ({ entry }) => {
-  const data = entry.getIn(['data']).toJS()
+  const data = entry.getIn(["data"]).toJS();
 
   if (data) {
     return (
@@ -18,17 +18,17 @@ const ProjectPostPreview = ({ entry }) => {
         releaseyear={data.releaseyear}
         imagegallery={data.imagegallery || { blurbs: [] }}
       />
-    )
+    );
   } else {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
-}
+};
 
 ProjectPostPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
-}
+};
 
-export default ProjectPostPreview
+export default ProjectPostPreview;

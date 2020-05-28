@@ -1,25 +1,21 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import Layout from '../../components/Layout'
-import ProjectRoll from '../../components/ProjectRoll'
+import { jsx } from "theme-ui";
+import Layout from "../../components/Layout";
+import ProjectRoll from "../../components/ProjectRoll";
 
 const ProjectIndexPage = () => {
-    return (
-      <Layout>
+  return (
+    <Layout>
+      <div>
+        <h1>Projects</h1>
+      </div>
+      <section>
         <div>
-          <h1>
-            Projects
-          </h1>
+          <ProjectRoll />
         </div>
-        <section>
-            <div>
-              <ProjectRoll />
-            </div>
-        </section>
-      </Layout>
-    )
-}
+      </section>
+    </Layout>
+  );
+};
 
 export default ProjectIndexPage;
-
-

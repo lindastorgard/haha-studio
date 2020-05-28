@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, useStaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql, useStaticQuery } from "gatsby";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 const ProjectRoll = () => {
   const { allMarkdownRemark } = useStaticQuery(
@@ -33,48 +33,41 @@ const ProjectRoll = () => {
         }
       }
     `
-    )
+  );
 
-		const { edges: posts } = allMarkdownRemark
-		
-		console.log(allMarkdownRemark);
+  const { edges: posts } = allMarkdownRemark;
 
-    return (
-      <div >
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div key={post.id}>
-              <article>
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div >
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p >
-                    <Link
-                     
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                  </p>
-                </header>
-              
-                  <Link to={post.fields.slug}>
-                    View Project
-                  </Link>
-              </article>
-            </div>
-          ))}
-      </div>
-    )
-  }
+  console.log(allMarkdownRemark);
+
+  return (
+    <div>
+      {posts &&
+        posts.map(({ node: post }) => (
+          <div key={post.id}>
+            <article>
+              <header>
+                {post.frontmatter.featuredimage ? (
+                  <div>
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: post.frontmatter.featuredimage,
+                        alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                      }}
+                    />
+                  </div>
+                ) : null}
+                <p>
+                  <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+                </p>
+              </header>
+
+              <Link to={post.fields.slug}>View Project</Link>
+            </article>
+          </div>
+        ))}
+    </div>
+  );
+};
 
 export default ProjectRoll;
 
@@ -84,4 +77,4 @@ ProjectRoll.propTypes = {
       edges: PropTypes.array,
     }),
   }),
-}
+};

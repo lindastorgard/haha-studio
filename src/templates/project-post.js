@@ -1,64 +1,58 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import { Helmet } from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import SectionContainer from '../components/SectionContainer'
-import ImageGallery from "../components/ImageGallery"
+import { jsx } from "theme-ui";
+import PropTypes from "prop-types";
+import { kebabCase } from "lodash";
+import { Helmet } from "react-helmet";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/Layout";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import SectionContainer from "../components/SectionContainer";
+import ImageGallery from "../components/ImageGallery";
 
-
-export const ProjectPostTemplate = ({ 
-  description, 
-  details, 
-  featuredimage, 
-  featuredimagealt, 
-  photocredits, 
-  releaseyear, 
-  title, 
+export const ProjectPostTemplate = ({
+  description,
+  details,
+  featuredimage,
+  featuredimagealt,
+  photocredits,
+  releaseyear,
+  title,
   imagegallery,
-  helmet 
+  helmet,
 }) => {
-   
-    return(
-      <SectionContainer>
-        {helmet || ''}
-        <section sx={{display: "flex", alignItems: "center"}}>
+  return (
+    <SectionContainer>
+      {helmet || ""}
+      <section sx={{ display: "flex", alignItems: "center" }}>
         {featuredimage ? (
-          <div sx={{flex: 3}}>
+          <div sx={{ flex: 3 }}>
             <PreviewCompatibleImage
               imageInfo={{
                 image: featuredimage,
                 alt: featuredimagealt,
               }}
-            /> 
+            />
             <p>{photocredits}</p>
           </div>
         ) : null}
-        <article sx={{flex: 2, p: 4}}>
+        <article sx={{ flex: 2, p: 4 }}>
           <h1>{title}</h1>
           <p>{details}</p>
           <p>{releaseyear}</p>
           <p>{description}</p>
         </article>
+      </section>
+      {imagegallery ? <ImageGallery images={imagegallery} /> : null}
 
-        </section>
-        { imagegallery ? (
-          <ImageGallery images={imagegallery} />
-        ) : null}
-
-        <aside>
-          <h2>Featured products</h2>
-        </aside>
-        
+      <aside>
+        <h2>Featured products</h2>
+      </aside>
     </SectionContainer>
-    )
+  );
 };
 
 const ProjectPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
   return (
     <Layout>
       <ProjectPostTemplate
@@ -81,16 +75,16 @@ const ProjectPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  )
-}
+  );
+};
 
 ProjectPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
-}
+};
 
-export default ProjectPost
+export default ProjectPost;
 
 export const pageQuery = graphql`
   query ProjectPostByID($id: String!) {
@@ -125,6 +119,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
-
-
+`;
