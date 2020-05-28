@@ -75,28 +75,14 @@ const FeaturedProducts = ({ products, title }) => {
                 gridRow: "1",
               }}
             >
-              <Link to={node.fields.slug}>
-                <FeaturedProductsCarousel
-                  images={node.frontmatter.imagegallery}
-                  colors={node.frontmatter.productcolor}
-                />
-              </Link>
+              <FeaturedProductsCarousel
+                slug={node.fields.slug}
+                images={node.frontmatter.imagegallery}
+                colors={node.frontmatter.productcolor}
+              />
+
               <h3 sx={{ mt: 4 }}>{node.frontmatter.title}</h3>
               <p>{node.frontmatter.price}</p>
-              <div sx={{ display: "flex" }}>
-                {node.frontmatter.productcolor.map((color) => {
-                  return (
-                    <div
-                      sx={{
-                        height: "15px",
-                        width: "15px",
-                        borderRadius: "50%",
-                        backgroundColor: color.hexcode,
-                      }}
-                    />
-                  );
-                })}
-              </div>
               <button sx={{ mt: 4 }}>Add to Cart</button>
             </div>
           );
