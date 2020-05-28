@@ -1,22 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql, StaticQuery } from "gatsby";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 class BlogRoll extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div >
+      <div>
         {posts &&
           posts.map(({ node: post }) => (
             <div key={post.id}>
               <article>
                 <header>
                   {post.frontmatter.featuredimage ? (
-                    <div >
+                    <div>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
@@ -25,32 +25,23 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p >
-                    <Link
-                     
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
+                  <p>
+                    <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
                     <span> &bull; </span>
-                    <span>
-                      {post.frontmatter.date}
-                    </span>
+                    <span>{post.frontmatter.date}</span>
                   </p>
                 </header>
                 <p>
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
+                  <Link to={post.fields.slug}>Keep Reading →</Link>
                 </p>
               </article>
             </div>
           ))}
       </div>
-    )
+    );
   }
 }
 
@@ -60,7 +51,7 @@ BlogRoll.propTypes = {
       edges: PropTypes.array,
     }),
   }),
-}
+};
 
 export default () => (
   <StaticQuery
@@ -97,4 +88,4 @@ export default () => (
     `}
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
-)
+);

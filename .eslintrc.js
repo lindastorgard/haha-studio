@@ -19,7 +19,8 @@ plugins: [ 'react', 'prettier' ],
 rules: {
   'prettier/prettier': 'warn',
   'react/forbid-prop-types': [ 0, { forbid: [ 'any' ] } ],
-  'react/prop-types': 0
+  'react/prop-types': 0,
+
 },
 env: {
   jest: true,

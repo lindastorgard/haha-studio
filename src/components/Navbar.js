@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import React from "react";
 import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
@@ -35,6 +37,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
+        sx={{ height: "60px" }}
         className="navbar is-transparent"
         role="navigation"
         aria-label="main-navigation"

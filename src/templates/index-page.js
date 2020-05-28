@@ -1,39 +1,22 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import PropTypes, { array } from "prop-types";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import { Link, graphql } from "gatsby";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import Sectionblock from "../components/Sectionblock";
+import HeroImage from "../components/HeroImage";
 
 export const IndexPageTemplate = ({ title, image, imageAlt, section }) => {
   return (
     <section>
-      <h2>{title}</h2>
-      {image ? (
-        <PreviewCompatibleImage
-          imageInfo={{
-            image: image,
-            alt: imageAlt,
-          }}
-        />
-      ) : null}
-      {section?.map((s) => {
+      <HeroImage image={image} title={title} alt={imageAlt} />
+      {section?.map((section) => {
         return (
-          <section key={s.heading} sx={{ display: "flex" }}>
-            <div sx={{ flex: 3 }}>
-              <PreviewCompatibleImage
-                imageInfo={{
-                  image: s.image,
-                  alt: s.alt,
-                }}
-              />
-            </div>
-            <article sx={{ flex: 2 }}>
-              <h2>{s.heading}</h2>
-              <p>{s.text}</p>
-              <button>{s.linktitle}</button>
-            </article>
-          </section>
+          <Sectionblock
+            key={section.heading}
+            section={section}
+            color={"#F1F1EF"}
+          />
         );
       })}
     </section>
