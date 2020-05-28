@@ -8,6 +8,7 @@ import Layout from "../components/Layout";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import SectionContainer from "../components/SectionContainer";
 import ImageGallery from "../components/ImageGallery";
+import FeaturedProducts from "../components/FeaturedProducts";
 
 export const ProjectPostTemplate = ({
   description,
@@ -19,6 +20,8 @@ export const ProjectPostTemplate = ({
   title,
   imagegallery,
   helmet,
+  relatedproductstitle,
+  products,
 }) => {
   return (
     <SectionContainer>
@@ -44,9 +47,7 @@ export const ProjectPostTemplate = ({
       </section>
       {imagegallery ? <ImageGallery images={imagegallery} /> : null}
 
-      <aside>
-        <h2>Featured products</h2>
-      </aside>
+      <FeaturedProducts products={products} title={relatedproductstitle} />
     </SectionContainer>
   );
 };
@@ -63,6 +64,8 @@ const ProjectPost = ({ data }) => {
         photocredits={post.frontmatter.photocredits}
         releaseyear={post.frontmatter.releaseyear}
         imagegallery={post.frontmatter.imagegallery}
+        relatedproductstitle={post.frontmatter.relatedproductstitle}
+        products={post.frontmatter.products}
         helmet={
           <Helmet titleTemplate="%s | Project">
             <title>{`${post.frontmatter.title}`}</title>
@@ -97,6 +100,8 @@ export const pageQuery = graphql`
         details
         releaseyear
         photocredits
+        relatedproductstitle
+        products
         imagegallery {
           image {
             id
@@ -106,7 +111,6 @@ export const pageQuery = graphql`
               }
             }
           }
-          alttext
         }
         featuredimagealt
         featuredimage {

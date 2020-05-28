@@ -1,39 +1,32 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import { Helmet } from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import SectionContainer from '../components/SectionContainer'
-import ImageGallery from "../components/ImageGallery"
+import { jsx } from "theme-ui";
+import PropTypes from "prop-types";
+import { kebabCase } from "lodash";
+import { Helmet } from "react-helmet";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/Layout";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import SectionContainer from "../components/SectionContainer";
+import ImageGallery from "../components/ImageGallery";
 
-
-export const ProductPostTemplate = ({ 
-  title, 
-  helmet 
-}) => {
-   
-    return(
-      <SectionContainer>
-        {helmet || ''}
-        <section sx={{display: "flex"}}>
-        <article sx={{flex: 2}}>
+export const ProductPostTemplate = ({ title, helmet }) => {
+  return (
+    <SectionContainer>
+      {helmet || ""}
+      <section sx={{ display: "flex" }}>
+        <article sx={{ flex: 2 }}>
           <h1>{title}</h1>
         </article>
-
-        </section>
-        <aside>
-          <h2>Featured products</h2>
-        </aside>
-        
+      </section>
+      <aside>
+        <h2>Featured products</h2>
+      </aside>
     </SectionContainer>
-    )
+  );
 };
 
 const ProductPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
   return (
     <Layout>
       <ProductPostTemplate
@@ -50,16 +43,16 @@ const ProductPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  )
-}
+  );
+};
 
 ProductPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
-}
+};
 
-export default ProductPost
+export default ProductPost;
 
 export const pageQuery = graphql`
   query ProductPostByID($id: String!) {
@@ -72,4 +65,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

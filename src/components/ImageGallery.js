@@ -13,7 +13,6 @@ const ImageGallery = ({ images }) => {
       }}
     >
       {images.map((image) => {
-        console.log(image);
         return (
           <div
             sx={{
