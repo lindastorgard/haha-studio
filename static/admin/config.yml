@@ -9,8 +9,6 @@ backend:
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
 
-publish_mode: editorial_workflow
-
 media_folder: static/img
 public_folder: /img
 
@@ -51,7 +49,7 @@ collections:
         collection: 'products'
         searchFields: ['title']
         valueField: 'title'
-        displayFields: ['title', 'price']
+        displayFields: ['title', 'price', imagegallery, productcolor]
         hint: "Select related products, maximum of four"
       - {
           label: "Template Key",
@@ -78,6 +76,7 @@ collections:
               { label: "Alt Text", name: "alttext", widget: "string" },
             ],
         }
+      - { label: "Section title for related products", name: "relatedproductstitle", widget: "string"}
 
   - name: "products"
     label: "Products"
@@ -95,7 +94,7 @@ collections:
       collection: 'products'
       searchFields: ['title']
       valueField: 'title'
-      displayFields: ['title', 'price']
+      displayFields: ['title', 'price', imagegallery, productcolor]
 
     - label: 'Featured Projects'
       name: 'projects'
