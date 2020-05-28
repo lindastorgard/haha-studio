@@ -1,14 +1,17 @@
 ---
+details: |-
+  Producer: HAHA studio
+  Assistant: Sven-Eric Söderström
 blog:
   - Making sense of the SCAA’s new Flavor Wheel
+products:
+  - Alia Pack_A
+  - test
 templateKey: project-post
 date: 2020-05-27T16:10:27.157Z
 title: Rainbow Lamp
 featuredimage: /img/project_rainbow_lamp_04-1.png
 featuredimagealt: Rainbow Lamp
-details: |-
-  Producer: HAHA studio
-  Assistant: Sven-Eric Söderström
 releaseyear: "2017"
 description: >-
   There is a story behind Rainbow: its shape was not designed, it was found.
@@ -19,8 +22,6 @@ description: >-
 
   Fit for ceiling or desk. Rainbow Lamp will be available from August 2019, email us if you are interested in pre-ordering the product.
 photocredits: "Photo credits: HAHA studio & Anna Heck"
-gallery:
-  - image: /img/blog-index.jpg
 imagegallery:
   - alt: Rainbow Lamp
     image: /img/project_rainbow_lamp_04-1.png
@@ -37,10 +38,13 @@ imagegallery:
   - alt: Rainbow Lamp
     image: /img/project_rainbow_lamp_03-3.png
     alttext: h
-  - alttext: y
+  - alttext: true
     image: /img/flavor_wheel.jpg
-  - alttext: y
+  - alttext: true
     image: /img/home-jumbotron.jpg
-  - alttext: y
+  - alttext: true
     image: /img/jumbotron.jpg
+relatedproductstitle: Related Products
+gallery:
+  - image: /img/blog-index.jpg
 ---
