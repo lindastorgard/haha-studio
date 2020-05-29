@@ -8,7 +8,8 @@ details: something
 imagegallery:
   - image: /img/project_rainbow_lamp_04-1.png
     alttext: lamp
-    productcolor: blue
+    productcolor: black
+    hexcode: "#000"
 productcolor:
   - colorname: blue
     hexcode: "#000"
