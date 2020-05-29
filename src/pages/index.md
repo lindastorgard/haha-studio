@@ -15,6 +15,7 @@ section:
 
       The practice designs lighting fixtures, accessories, limited editions, and undertakes regular collaborations in interior architecture.
     pages: Landing page test
+    title: HAHA Studio
   - heading: Services
     alt: services
     pages: Landing page
@@ -25,4 +26,5 @@ section:
       undertakes regular collaborations in interior architecture.
 
       We create custommade design for  interior projects.
+    title: Services
 ---
