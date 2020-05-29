@@ -38,10 +38,6 @@ const FeaturedProducts = ({ products, title }) => {
                     }
                   }
                 }
-                productcolor {
-                  colorname
-                  hexcode
-                }
               }
               fields {
                 slug

@@ -95,6 +95,7 @@ collections:
       searchFields: ['title']
       valueField: 'title'
       displayFields: ['title']
+      required: false
 
     - label: 'Featured Projects'
       name: 'projects'
@@ -105,6 +106,7 @@ collections:
       valueField: 'title'
       displayFields: ['title']
       hint: "Select related products, maximum of four"
+      required: false
     - {
         label: "Template Key",
         name: "templateKey",
@@ -125,17 +127,7 @@ collections:
           [
             { label: "Image", name: "image", widget: "image" },
             { label: "Alt Text", name: "alttext", widget: "string" },
-            { label: "Product Color", name: "productcolor", widget: "string", required: false, hint: "If applicable choose corresponding colro to the product. All colors should be unique, if you already tagged another image with this color, please ignore this field " }
-          ],
-      } 
-    - {
-        label: Product Colors,
-        label_singular: "New Color",
-        name: productcolor,
-        widget: list,
-        fields: 
-          [
-            { label: "Color Name", name: "colorname", widget: "string" },
+            { label: "Product Color", name: "productcolor", widget: "string", required: false, hint: "If applicable choose corresponding colro to the product. All colors should be unique, if you already tagged another image with this color, please ignore this field " },
             { label: "HEX code", name: "hexcode", widget: "string", hint: "Please add HEX code for the product color starting with #, eg: #C0C6CB " },
           ],
       }     
