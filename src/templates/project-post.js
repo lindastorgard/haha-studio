@@ -11,7 +11,10 @@ import FeaturedProducts from "../components/FeaturedProducts";
 import Content, { HTMLContent } from "../components/Content";
 
 export const ProjectPostTemplate = ({
-  details,
+  content,
+  contentComponent,
+  assistant,
+  producer,
   featuredimage,
   featuredimagealt,
   photocredits,
@@ -22,6 +25,8 @@ export const ProjectPostTemplate = ({
   relatedproductstitle,
   products,
 }) => {
+  const PostContent = contentComponent || Content;
+  console.log(featuredimage);
   return (
     <SectionContainer>
       {helmet || ""}
@@ -33,7 +38,7 @@ export const ProjectPostTemplate = ({
           mb: 4,
         }}
       >
-        {featuredimage && featuredimagealt && (
+        {featuredimage && (
           <div sx={{ flex: 3, width: "100%" }}>
             <PreviewCompatibleImage
               imageInfo={{
@@ -53,9 +58,10 @@ export const ProjectPostTemplate = ({
           }}
         >
           <h1 sx={{ fontSize: 6, mb: [3, 4] }}>{title}</h1>
-          <p sx={{ fontSize: 0 }}>{details}</p>
+          <p sx={{ fontSize: 0 }}>{producer}</p>
+          <p sx={{ fontSize: 0 }}>{assistant}</p>
           <p sx={{ mb: [3, 4], fontSize: 0 }}>{releaseyear}</p>
-          {/* <p sx={{ fontSize: 2 }}>{description}</p> */}
+          <PostContent content={content} />
         </article>
       </section>
       {imagegallery.length > 0 && imagegallery ? (
@@ -68,19 +74,40 @@ export const ProjectPostTemplate = ({
   );
 };
 
+ProjectPostTemplate.propTypes = {
+  content: PropTypes.node.isRequired,
+  contentComponent: PropTypes.func,
+  description: PropTypes.string,
+  title: PropTypes.string,
+  helmet: PropTypes.object,
+  assistant: PropTypes.string,
+  producer: PropTypes.string,
+  featuredimage: PropTypes.object,
+  featuredimagealt: PropTypes.string,
+  photocredits: PropTypes.string,
+  releaseyear: PropTypes.string,
+  imagegallery: PropTypes.array,
+  relatedproductstitle: PropTypes.string,
+  products: PropTypes.array,
+};
+
 const ProjectPost = ({ data }) => {
   const { markdownRemark: post } = data;
   return (
     <Layout>
       <ProjectPostTemplate
-        details={post.frontmatter.details}
-        featuredimage={post.frontmatter.featuredimage}
-        featuredimagealt={post.frontmatter.featuredimagealt}
-        photocredits={post.frontmatter.photocredits}
+        content={post.html}
+        contentComponent={HTMLContent}
+        title={post.frontmatter.title}
         releaseyear={post.frontmatter.releaseyear}
-        imagegallery={post.frontmatter.imagegallery}
+        photocredits={post.frontmatter.photocredits}
         relatedproductstitle={post.frontmatter.relatedproductstitle}
         products={post.frontmatter.products}
+        assistant={post.frontmatter.assistant}
+        producer={post.frontmatter.producer}
+        featuredimage={post.frontmatter.featuredimage}
+        featuredimagealt={post.frontmatter.featuredimagealt}
+        imagegallery={post.frontmatter.imagegallery}
         helmet={
           <Helmet titleTemplate="%s | Project">
             <title>{`${post.frontmatter.title}`}</title>
@@ -90,7 +117,6 @@ const ProjectPost = ({ data }) => {
             />
           </Helmet>
         }
-        title={post.frontmatter.title}
       />
     </Layout>
   );
@@ -108,14 +134,17 @@ export const pageQuery = graphql`
   query ProjectPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
+      html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
-        details
         releaseyear
         photocredits
         relatedproductstitle
         products
+        projects
+        photocredits
+        producer
+        assistant
         imagegallery {
           image {
             id

@@ -10,7 +10,6 @@ exports.createSchemaCustomization = ({ actions }) => {
       frontmatter: Frontmatter
     }
     type Frontmatter {
-      featuredimage: File 
       featuredimagealt: String!
       relatedproductstitle: String!
       photocredits: String!
