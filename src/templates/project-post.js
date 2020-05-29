@@ -46,8 +46,9 @@ export const ProjectPostTemplate = ({
         </article>
       </section>
       {imagegallery ? <ImageGallery images={imagegallery} /> : null}
-
-      {/* <FeaturedProducts products={products} title={relatedproductstitle} /> */}
+      {products && products.length > 0 ? (
+        <FeaturedProducts products={products} title={relatedproductstitle} />
+      ) : null}
     </SectionContainer>
   );
 };
