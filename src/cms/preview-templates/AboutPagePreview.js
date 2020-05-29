@@ -1,19 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { BrandPageTemplate } from "../../templates/brand-page";
+import { AboutPageTemplate } from "../../templates/about-page";
 
-const BrandPagePreview = ({ entry, widgetFor }) => (
-  <BrandPageTemplate
+const AboutPagePreview = ({ entry, widgetFor }) => (
+  <AboutPageTemplate
     title={entry.getIn(["data", "title"])}
     content={widgetFor("body")}
   />
 );
 
-BrandPageTemplate.propTypes = {
+AboutPageTemplate.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 };
 
-export default BrandPagePreview;
+export default AboutPagePreview;

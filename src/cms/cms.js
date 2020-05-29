@@ -3,7 +3,7 @@ import CMS from "netlify-cms-app";
 import uploadcare from "netlify-cms-media-library-uploadcare";
 import cloudinary from "netlify-cms-media-library-cloudinary";
 
-import BrandPagePreview from "./preview-templates/BrandPagePreview";
+import AboutPagePreview from "./preview-templates/AboutPagePreview";
 import BlogPostPreview from "./preview-templates/BlogPostPreview";
 import IndexPagePreview from "./preview-templates/IndexPagePreview";
 import ProjectPostPreview from "./preview-templates/ProjectPostPreview";
@@ -26,7 +26,7 @@ CMS.registerPreviewTemplate("projects", (props) => (
 
 CMS.registerPreviewTemplate("about", (props) => (
   <CSSInjector>
-    <BrandPagePreview {...props} />
+    <AboutPagePreview {...props} />
   </CSSInjector>
 ));
 

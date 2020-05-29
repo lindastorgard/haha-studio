@@ -183,7 +183,7 @@ collections:
                 }
               ],
           }
-      - file: "src/content/brand/index.md"
+      - file: "src/pages/brand/index.md"
         label: "Brand"
         name: "brand"
         fields:
@@ -222,3 +222,15 @@ collections:
                 { label: Alt, name: alt, widget: string, hint: "Add alternative text for the featured image used by screen readers for people with visual disability" },
               ],
             }
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
