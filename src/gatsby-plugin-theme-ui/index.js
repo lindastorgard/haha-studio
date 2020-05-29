@@ -31,5 +31,5 @@ export default {
       fontSize: 1,
       m: 0,
     },
-  }
+  },
 };

@@ -13,7 +13,7 @@ export const IndexPageTemplate = ({ title, image, imageAlt, section }) => {
       {section?.map((section) => {
         return (
           <Sectionblock
-            key={section.heading}
+            key={section.title}
             section={section}
             color={"#F1F1EF"}
           />
@@ -27,7 +27,6 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   imageAlt: PropTypes.string,
-  heading: PropTypes.string,
   section: PropTypes.array,
 };
 
@@ -39,7 +38,6 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         image={frontmatter.image}
         imageAlt={frontmatter.alt}
-        heading={frontmatter.heading}
         section={frontmatter.section}
       />
     </Layout>
@@ -72,7 +70,7 @@ export const pageQuery = graphql`
         alt
         heading
         section {
-          heading
+          title
           text
           linktitle
           alt

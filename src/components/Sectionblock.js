@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const Sectionblock = ({ section, color }) => {
+  console.log(section);
   return (
     <article
       sx={{
@@ -26,7 +27,7 @@ const Sectionblock = ({ section, color }) => {
         />
       </div>
       <div sx={{ flex: 2, p: 5, alignSelf: "center" }}>
-        <Styled.h2>{section.heading}</Styled.h2>
+        <Styled.h2>{section.title}</Styled.h2>
         <p>{section.text}</p>
         <Link to="#" className="navbar-item">
           {section.linktitle}

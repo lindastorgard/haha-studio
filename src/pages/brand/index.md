@@ -1,7 +1,7 @@
 ---
-templateKey: about-page
-path: /about
-title: About
+templateKey: brand-page
+path: /brand
+title: Brand
 ---
 ### Sustainable farming
 

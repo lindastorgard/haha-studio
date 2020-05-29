@@ -5,7 +5,7 @@ image: /img/project_rainbow_lamp_03-3.png
 alt: Spin lamp
 heading: Spin lamp
 section:
-  - heading: HAHA Studio
+  - title: HAHA Studio
     linktitle: The studio
     image: /img/blog-index.jpg
     alt: HAHA Studio
@@ -15,8 +15,7 @@ section:
 
       The practice designs lighting fixtures, accessories, limited editions, and undertakes regular collaborations in interior architecture.
     pages: Landing page test
-    title: HAHA Studio
-  - heading: Services
+  - title: Services
     alt: services
     pages: Landing page
     image: /img/chemex.jpg
