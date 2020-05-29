@@ -25,26 +25,24 @@ const FeaturedProducts = ({ products, title }) => {
           edges {
             node {
               id
+              fields {
+                slug
+              }
               frontmatter {
                 title
                 price
                 imagegallery {
                   productcolor
+                  hexcode
+                  alttext
                   image {
                     childImageSharp {
-                      fluid {
-                        src
+                      fluid(maxWidth: 900, quality: 100) {
+                        ...GatsbyImageSharpFluid
                       }
                     }
                   }
                 }
-                productcolor {
-                  colorname
-                  hexcode
-                }
-              }
-              fields {
-                slug
               }
             }
           }

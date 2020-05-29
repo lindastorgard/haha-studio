@@ -63,7 +63,7 @@ collections:
       - { label: "Featured Image Alt", name: "featuredimagealt", widget: string, hint: "Add alternative text for the featured image used by screen readers for people with visual disability" }
       - { label: "Details", name: "details", widget: "markdown"}
       - { label: "Release year", name: "releaseyear", widget: "text"}
-      - { label: "Description", name: "description", widget: "text"}
+      - { label: "Description", name: "description", widget: "markdown"}
       - { label: "Photo Credits", name: "photocredits", widget: "string"}
       - {
           label: Image Gallery,

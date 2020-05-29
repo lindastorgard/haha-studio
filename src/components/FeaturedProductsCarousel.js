@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const FeaturedProductsCarousel = ({ images, colors, slug }) => {
+const FeaturedProductsCarousel = ({ images, slug }) => {
   let sliderRef = useRef(null);
   const settings = {
     initialSlide: 0,
@@ -51,7 +51,7 @@ const FeaturedProductsCarousel = ({ images, colors, slug }) => {
         })}
       </Slider>
       <div>
-        {colors.map((color, index) => {
+        {/* {colors.map((color, index) => {
           console.log("colors", index, color.colorname);
           return (
             <div
@@ -65,7 +65,7 @@ const FeaturedProductsCarousel = ({ images, colors, slug }) => {
               }}
             />
           );
-        })}
+        })} */}
       </div>
     </div>
   );
