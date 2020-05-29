@@ -10,7 +10,6 @@ import ImageGallery from "../components/ImageGallery";
 import FeaturedProducts from "../components/FeaturedProducts";
 import Content, { HTMLContent } from "../components/Content";
 
-
 export const ProjectPostTemplate = ({
   description,
   details,
@@ -63,7 +62,9 @@ export const ProjectPostTemplate = ({
           <p sx={{ fontSize: 2 }}>{description}</p>
         </article>
       </section>
-      {imagegallery.length > 0 && imagegallery ? <ImageGallery images={imagegallery} /> : null}
+      {imagegallery.length > 0 && imagegallery ? (
+        <ImageGallery images={imagegallery} />
+      ) : null}
       {products && products.length > 0 ? (
         <FeaturedProducts products={products} title={relatedproductstitle} />
       ) : null}

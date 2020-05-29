@@ -51,6 +51,7 @@ collections:
         valueField: 'title'
         displayFields: ['title']
         hint: "Select related products, maximum of four"
+        required: false
       - {
           label: "Template Key",
           name: "templateKey",
@@ -58,22 +59,24 @@ collections:
           default: "project-post",
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Title", name: "title", widget: "string", hint: "Add title of the project" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Featured Image Alt", name: "featuredimagealt", widget: string, hint: "Add alternative text for the featured image used by screen readers for people with visual disability" }
-      - { label: "Details", name: "details", widget: "markdown"}
-      - { label: "Release year", name: "releaseyear", widget: "text"}
-      - { label: "Description", name: "description", widget: "markdown"}
-      - { label: "Photo Credits", name: "photocredits", widget: "string"}
+      - { label: "Featured Image Alt", name: "featuredimagealt", widget: string, hint: "Add alternative text used by screen readers for people with visual disability"}
+      - { label: "Photo Credits", name: "photocredits", widget: "string", required: false, hint: "This field is not required. Add photo credits in this field starting with Photo credits:"}
+      - { label: "Producer", name: "producer", widget: "string", required: false, hint: "This field is not required. Add project producer in this field starting with Producer:"}
+      - { label: "Assitant", name: "assistant", widget: "string", required: false, hint: "This field is not required. Add project assistan in this field starting with Assistant:"}
+      - { label: "Release year", name: "releaseyear", widget: "string", hint: "Add release year for the project"}
+      - { label: "Description", name: "description", widget: "markdown", hint: "Add project description. You can style the text with line breaks."}
       - {
           label: Image Gallery,
           label_singular: "New Image",
           name: imagegallery,
           widget: list,
+          hint: "This is project image gallery",
           fields: 
             [
               { label: "Image", name: "image", widget: "image" },
-              { label: "Alt Text", name: "alttext", widget: "string" },
+              { label: "Alt Text", name: "alttext", widget: "string", hint: "Add alternative text used by screen readers for people with visual disability" },
             ],
         }
       - { label: "Section title for related products", name: "relatedproductstitle", widget: "string"}
@@ -125,7 +128,7 @@ collections:
           [
             { label: "Image", name: "image", widget: "image" },
             { label: "Alt Text", name: "alttext", widget: "string" },
-            { label: "Product Color", name: "productcolor", widget: "string", required: false, hint: "If applicable choose corresponding colro to the product. All colors should be unique, if you already tagged another image with this color, please ignore this field " }
+            { label: "Product Color", name: "productcolor", widget: "string", required: false, hint: "If applicable choose corresponding color to the product. All colors should be unique, if you already tagged another image with this color, please ignore this field " }
           ],
       } 
     - {
