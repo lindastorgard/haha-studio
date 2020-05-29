@@ -11,7 +11,6 @@ import FeaturedProducts from "../components/FeaturedProducts";
 import Content, { HTMLContent } from "../components/Content";
 
 export const ProjectPostTemplate = ({
-  description,
   details,
   featuredimage,
   featuredimagealt,
@@ -56,7 +55,7 @@ export const ProjectPostTemplate = ({
           <h1 sx={{ fontSize: 6, mb: [3, 4] }}>{title}</h1>
           <p sx={{ fontSize: 0 }}>{details}</p>
           <p sx={{ mb: [3, 4], fontSize: 0 }}>{releaseyear}</p>
-          <p sx={{ fontSize: 2 }}>{description}</p>
+          {/* <p sx={{ fontSize: 2 }}>{description}</p> */}
         </article>
       </section>
       {imagegallery.length > 0 && imagegallery ? (
@@ -74,7 +73,6 @@ const ProjectPost = ({ data }) => {
   return (
     <Layout>
       <ProjectPostTemplate
-        description={post.frontmatter.description}
         details={post.frontmatter.details}
         featuredimage={post.frontmatter.featuredimage}
         featuredimagealt={post.frontmatter.featuredimagealt}
@@ -113,7 +111,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
         details
         releaseyear
         photocredits
