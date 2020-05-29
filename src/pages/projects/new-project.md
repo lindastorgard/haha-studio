@@ -1,28 +1,36 @@
 ---
 products:
   - test products
+  - Alia Pack_A
 templateKey: project-post
 date: 2020-05-28T15:31:49.829Z
-title: New Project
-featuredimage: /img/products-grid1.jpg
+title: Rainbow Lamp
+featuredimage: /img/project_rainbow_lamp_04-1.png
 featuredimagealt: feature img
 details: |-
-  yeyey
+  Producer: HAHA studio
 
-  yeeyyeye:joodkbpoksb
-
-  dvidnfsngk fk
+  Assistant: Sven-Eric Söderström
 releaseyear: "2017"
-description: someth in funny
-photocredits: viktorija
+description: >-
+  There is a story behind Rainbow: its shape was not designed, it was found.
+  Each part existed for a different purpose before they were united in Rainbow.
+  The aluminum elbow is a standard part for the commercial vehicle industry. The
+  light itself is a standard LED bulb.
+
+
+  Fit for ceiling or desk. Rainbow Lamp will be available from August 2019, email us if you are interested in pre-ordering the product.
+photocredits: HAHA studio & Anna Heck
 imagegallery:
-  - image: /img/blog-index.jpg
-    alttext: coffee
-  - image: /img/chemex.jpg
-    alttext: coffee
-  - image: /img/flavor_wheel.jpg
+  - image: /img/project_nest_lamp_01_cover-3.png
+    alttext: rainbow lamp
+  - image: /img/project_liberty_lamp_02-2.png
+    alttext: lamp
+  - image: /img/project_rainbow_lamp_01_cover-1.png
     alttext: voffee
   - alttext: coffee
-    image: /img/products-grid2.jpg
+    image: /img/project_rainbow_lamp_02-3.png
+  - image: /img/project_rainbow_lamp_03-3.png
+    alttext: rainbow
 relatedproductstitle: Related products
 ---
