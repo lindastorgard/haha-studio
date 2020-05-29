@@ -1,13 +1,12 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx } from "theme-ui";
 import PropTypes from "prop-types";
 import BackgroundImage from "gatsby-background-image";
 
 const HeroImage = ({ image, alt, title }) => {
-  console.log(image);
   return (
     <div>
-      {image ? (
+      {image && (
         <BackgroundImage
           fluid={image.childImageSharp.fluid}
           alt={alt}
@@ -28,7 +27,7 @@ const HeroImage = ({ image, alt, title }) => {
             {title}
           </h2>
         </BackgroundImage>
-      ) : null}
+      )}
     </div>
   );
 };

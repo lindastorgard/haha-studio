@@ -33,7 +33,7 @@ export const ProjectPostTemplate = ({
           mb: 4,
         }}
       >
-        {featuredimage ? (
+        {featuredimage && featuredimagealt && (
           <div sx={{ flex: 3, width: "100%" }}>
             <PreviewCompatibleImage
               imageInfo={{
@@ -45,7 +45,7 @@ export const ProjectPostTemplate = ({
               Photo credits: {photocredits}
             </p>
           </div>
-        ) : null}
+        )}
         <article
           sx={{
             flex: 2,
