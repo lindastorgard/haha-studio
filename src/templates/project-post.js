@@ -51,9 +51,6 @@ export const ProjectPostTemplate = ({
           sx={{
             flex: 2,
             padding: [3, 4],
-            // p: {
-            //   fontSize: 2,
-            // },
           }}
         >
           <h1 sx={{ fontSize: 6, mb: [3, 4] }}>{title}</h1>
