@@ -58,10 +58,24 @@ export const pageQuery = graphql`
   query ProductPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
+      fields {
+        slug
+      }
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
         description
+        details
+        imagegallery {
+          alttext
+          hexcode
+          productcolor
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
       }
     }
   }

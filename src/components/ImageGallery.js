@@ -12,7 +12,7 @@ const ImageGallery = ({ images }) => {
         gridGap: 2,
       }}
     >
-      {images.map((image) => {
+      {images.map((image, index) => {
         return (
           <div
             sx={{
@@ -51,7 +51,7 @@ const ImageGallery = ({ images }) => {
                 gridRow: "5 / 7",
               },
             }}
-            key={image.image.id}
+            key={index}
           >
             <PreviewCompatibleImage
               imageInfo={{

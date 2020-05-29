@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import SectionContainer from "../components/SectionContainer";
 import ImageGallery from "../components/ImageGallery";
 import FeaturedProducts from "../components/FeaturedProducts";
+import Content, { HTMLContent } from "../components/Content";
 
 export const ProjectPostTemplate = ({
   description,
@@ -26,26 +26,45 @@ export const ProjectPostTemplate = ({
   return (
     <SectionContainer>
       {helmet || ""}
-      <section sx={{ display: "flex", alignItems: "center" }}>
+      <section
+        sx={{
+          display: "flex",
+          flexDirection: ["column", null, "row"],
+          alignItems: "center",
+          mb: 4,
+        }}
+      >
         {featuredimage ? (
-          <div sx={{ flex: 3 }}>
+          <div sx={{ flex: 3, width: "100%" }}>
             <PreviewCompatibleImage
               imageInfo={{
                 image: featuredimage,
                 alt: featuredimagealt,
               }}
             />
-            <p>{photocredits}</p>
+            <p sx={{ fontSize: 0, my: [0, 1], padding: [3, null, "0px"] }}>
+              Photo credits: {photocredits}
+            </p>
           </div>
         ) : null}
-        <article sx={{ flex: 2, p: 4 }}>
-          <h1>{title}</h1>
-          <p>{details}</p>
-          <p>{releaseyear}</p>
-          <p>{description}</p>
+        <article
+          sx={{
+            flex: 2,
+            padding: [3, 4],
+            // p: {
+            //   fontSize: 2,
+            // },
+          }}
+        >
+          <h1 sx={{ fontSize: 6, mb: [3, 4] }}>{title}</h1>
+          <p sx={{ fontSize: 0 }}>{details}</p>
+          <p sx={{ mb: [3, 4], fontSize: 0 }}>{releaseyear}</p>
+          <p sx={{ fontSize: 2 }}>{description}</p>
         </article>
       </section>
-      {imagegallery ? <ImageGallery images={imagegallery} /> : null}
+      {imagegallery.length > 0 && imagegallery ? (
+        <ImageGallery images={imagegallery} />
+      ) : null}
       {products && products.length > 0 ? (
         <FeaturedProducts products={products} title={relatedproductstitle} />
       ) : null}
