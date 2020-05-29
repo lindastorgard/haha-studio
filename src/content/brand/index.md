@@ -1,6 +1,6 @@
 ---
 heroimage: /img/project_nest_lamp_01_cover-3.png
-alt: Nest lamp test
+alt: Nest lamp testing
 title: The Brand test
 herosection:
   title: HAHA Studio
