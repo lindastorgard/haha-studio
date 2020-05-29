@@ -4,12 +4,14 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
-export const BrandPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
+// export const BrandPageTemplate = ({ title, content, contentComponent }) => {
+export const BrandPageTemplate = ({ markdownRemark }) => {
+  console.log(markdownRemark);
+  // const PageContent = contentComponent || Content;
 
   return (
     <section className="section section--gradient">
-      <div className="container">
+      {/* <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
@@ -20,16 +22,16 @@ export const BrandPageTemplate = ({ title, content, contentComponent }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
 
-BrandPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-};
+// BrandPageTemplate.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   content: PropTypes.string,
+//   contentComponent: PropTypes.func,
+// };
 
 const BrandPage = ({ data }) => {
   const { markdownRemark: post } = data;
@@ -54,10 +56,48 @@ export default BrandPage;
 export const brandPageQuery = graphql`
   query BrandPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
+      id
       frontmatter {
         title
+        alt
+        heroimage {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        herosection {
+          title
+          text
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          alt
+        }
+        sectionblock {
+          title
+          text
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          alt
+        }
       }
     }
   }
 `;
+
+
+// html
+//       frontmatter {
+//         title
+//       }
