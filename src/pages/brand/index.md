@@ -1,7 +1,7 @@
 ---
 heroimage: /img/chemex.jpg
 alt: Hero Image
-title: The Brand
+title: The Brand Test
 herosection:
   title: HAHA Studio
   text: >-
