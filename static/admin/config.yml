@@ -175,6 +175,45 @@ collections:
                 }
               ],
           }
+      - file: "src/pages/brand/index.md"
+        label: "Brand"
+        name: "brand"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "brand-page",
+            }      
+          - { label: Heromage, name: heroimage, widget: image, hint: "This is the Hero Image" }
+          - { label: Alt, name: alt, widget: string, hint: "Add alternative text for the featured image used by screen readers for people with visual disability" }
+          - { label: Title, name: title, widget: string, hint: "This is the title displayed on the Hero Image" }
+          - {
+            label: Herosection,
+            name: herosection,
+            widget: object,
+            hint: "This is a Section Block under Hero Image. The Section Block consists of a title, text and an Image.",
+            fields:
+              [
+                { label: Title, name: title, widget: string, hint: "This is the title of the Section Block" },
+                { label: Text, name: text, widget: markdown, hint: "This is the text of the Section Block" },
+                { label: Image, name: image, widget: image, hint: "This is the image of the Section Block" },
+                { label: Alt, name: alt, widget: string, hint: "Add alternative text for the featured image used by screen readers for people with visual disability" },
+              ],
+            }
+          - {
+            label: SectionBlock,
+            name: sectionblock,
+            widget: list,
+            hint: "This is a Section Block. The Section Block consists of title, text and an Image.",
+            fields:
+              [
+                { label: Title, name: title, widget: string, hint: "This is the title of the Section Block" },
+                { label: Text, name: text, widget: markdown, hint: "This is the text of the Section Block" },
+                { label: Image, name: image, widget: image, hint: "This is the image of the Section Block" },
+                { label: Alt, name: alt, widget: string, hint: "Add alternative text for the featured image used by screen readers for people with visual disability" },
+              ],
+            }
       - file: "src/content/about/index.md"
         label: "About"
         name: "about"
