@@ -214,7 +214,7 @@ collections:
                 { label: Alt, name: alt, widget: string, hint: "Add alternative text for the featured image used by screen readers for people with visual disability" },
               ],
             }
-      - file: "src/content/about/index.md"
+      - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
         fields:

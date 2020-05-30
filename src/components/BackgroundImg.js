@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import BackgroundImage from "gatsby-background-image";
 
 const BackgroundImg = ({ imageInfo }) => {
-  console.log(imageInfo);
   const { alt = "", childImageSharp, image, title } = imageInfo;
 
   if (!!image && !!image.childImageSharp) {

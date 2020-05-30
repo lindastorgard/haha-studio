@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx } from "theme-ui";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
@@ -26,7 +26,7 @@ const Sectionblock = ({ section, color }) => {
         />
       </div>
       <div sx={{ flex: 2, p: 5, alignSelf: "center" }}>
-        <Styled.h2>{section.heading}</Styled.h2>
+        <h2>{section.heading}</h2>
         <p>{section.text}</p>
         <Link to="#" className="navbar-item">
           {section.linktitle}

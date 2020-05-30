@@ -1,5 +1,7 @@
 ---
 heroimage: /img/chemex.jpg
+templateKey: brand-page
+path: /brand
 alt: alt
 title: hej
 herosection:
