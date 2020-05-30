@@ -192,11 +192,11 @@ collections:
             label: Herosection,
             name: herosection,
             widget: object,
-            hint: "This is a Section Block under Hero Image. The Section Block consists of a title, text and an Image.",
+            hint: "This is a Section Block under Hero Image. The block consists of a title, text and an Image.",
             fields:
               [
                 { label: Title, name: title, widget: string, hint: "This is the title of the Section Block" },
-                { label: Body, name: body, widget: markdown, hint: "This is the text of the Section Block" },
+                { label: Text, name: body, widget: 'markdown', hint: "This is the text of the Section Block" },
                 { label: Image, name: image, widget: image, hint: "This is the image of the Section Block" },
                 { label: Alt, name: alt, widget: string, hint: "Add alternative text for the featured image used by screen readers for people with visual disability" },
               ],
@@ -209,7 +209,7 @@ collections:
             fields:
               [
                 { label: Title, name: title, widget: string, hint: "This is the title of the Section Block" },
-                { label: Body, name: body, widget: markdown, hint: "This is the text of the Section Block" },
+                { label: Text, name: body, widget: 'markdown', hint: "This is the text of the Section Block" },
                 { label: Image, name: image, widget: image, hint: "This is the image of the Section Block" },
                 { label: Alt, name: alt, widget: string, hint: "Add alternative text for the featured image used by screen readers for people with visual disability" },
               ],
