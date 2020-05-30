@@ -4,12 +4,18 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Sectionblock from "../components/Sectionblock";
-import HeroImage from "../components/HeroImage";
+import BackgroundImg from "../components/BackgroundImg";
 
 export const IndexPageTemplate = ({ title, image, imageAlt, section }) => {
   return (
     <section>
-      <HeroImage image={image} title={title} alt={imageAlt} />
+      <BackgroundImg
+        imageInfo={{
+          image: image,
+          alt: imageAlt,
+          title: title,
+        }}
+      />
       {section?.map((section) => {
         return (
           <Sectionblock
