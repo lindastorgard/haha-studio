@@ -116,6 +116,7 @@ collections:
         widget: "hidden",
         default: "product-post",
       }
+    - {label: "Out of Stock", name: "outofstock", widget: "boolean", default: false}
     - { label: "Publish Date", name: "date", widget: "datetime" }
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Description", name: "description", widget: "markdown"}
